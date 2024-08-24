@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.su.react.mapper.PersonMapper">
+    <select id="getPerson" resultType="com.su.react.model.Person">
+        select
+        id,
+        name,
+        age
+        from person
+        where id = #{id}
+    </select>
+    <update id="updatePerson">
+        update
+        person
+        set
+        name = #{name},
+        age = #{age}
+        where
+        id = #{id}
+    </update>
+</mapper>
